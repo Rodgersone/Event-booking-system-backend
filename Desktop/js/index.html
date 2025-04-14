@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Analyze Number</title>
 </head>
 <body>
-    <p>today is satuday</p>
-    <p>today is satuday</p>
-    
+    <h1>Analyze a Number</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+
+    <script>
+        
+        function analyzeNumber(num) {
+            
+            if (num === 0) {
+                console.log("The number is zero.");
+            } else {
+                
+                let sign = (num > 0) ? "positive" : "negative";
+
+              
+                let type = (num % 2 === 0) ? "even" : "odd";
+
+                
+                console.log(`The number is ${sign} and ${type}.`);
+            }
+        }
+
+      
+        const num = parseInt(prompt("Enter a number:"));
+        analyzeNumber(num);
+    </script>
 </body>
 </html>
